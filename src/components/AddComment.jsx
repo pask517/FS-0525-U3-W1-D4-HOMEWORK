@@ -4,13 +4,13 @@ const URL = `https://striveschool-api.herokuapp.com/api/comments/`
 class AddComments extends Component {
   render() {
     return (
-      <Form className="mt-2">
+      <Form className="mt-2" onSubmit={fetch(URL)}>
         <Form.Group className="mb-3">
           <Form.Label>Lascia un commento</Form.Label>
           <Form.Control type="text" placeholder="Enter comment" />
         </Form.Group>
 
-        <Button variant="primary" type="submit" onSubmit={fetch(URL)}>
+        <Button variant="primary" type="submit">
           Submit
         </Button>
       </Form>
